@@ -1,0 +1,111 @@
+.landing {
+    display: flex;
+    flex-direction: row;
+    padding: 0 6em;
+    margin-top: 7em;
+    gap: 2em;
+
+    @include responsive(m) {
+        padding: 0 50px;
+    }
+
+    @include responsive(l) {
+        padding: 0 70px;
+        margin-top: 8em;
+    }
+
+    @include responsive(xl) {
+        padding: 0 80px;
+        margin-top: 15em;
+        gap: 3em;
+    }
+
+    @include responsive(hd) {
+        padding: 4em 150px;
+        gap: 60px;
+    }
+
+    &_child {
+        @include responsive(m) {
+            border: solid $color1 1px;
+            border-radius: 18px;
+            padding: 1em;
+            transition: box-shadow .4s;
+
+            &:hover {
+                box-shadow: 0 3px 15px rgba(0, 0, 0, 0.192), 0 10px 10px rgba(0, 0, 0, 0.068);
+            }
+        }
+
+        @include responsive(l) {
+            padding: 1.5em;
+        }
+
+        @include responsive(xl) {
+            padding: 2em;
+        }
+
+        @include responsive(hd) {
+            padding: 3em;
+        }
+
+        h1 {
+            @include responsive(m) {
+                font-family: SegoeB;
+                color: $color2;
+                font-size: 14px;
+                margin-top: 1em;
+            }
+
+            @include responsive(l) {
+                font-size: 20px;
+            }
+
+            @include responsive(xl) {
+                font-size: 25px;
+            }
+
+            @include responsive(hd) {
+                font-size: 32px;
+            }
+        }
+
+        p {
+            @include responsive(m) {
+                font-family: SegoeSB;
+                font-size: 8px;
+                margin-top: 1em;
+                color: $color3;
+            }
+
+            @include responsive(l) {
+                font-size: 10px;
+            }
+
+            @include responsive(xl) {
+                font-size: 12px;
+            }
+
+            @include responsive(hd) {
+                font-size: 20px;
+            }
+        }
+
+
+        img {
+            @include responsive(m) {
+                margin: 0 auto;
+                display: block;
+                width: 5em;
+            }
+
+            @include responsive(l) {
+                width: 50%;
+            }
+
+            @include responsive(hd) {
+                width: auto;
+            }
+        }
+    }
+}

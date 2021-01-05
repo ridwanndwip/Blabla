@@ -1,0 +1,141 @@
+.hero {
+    margin-top: 4em;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    justify-content: space-between;
+
+    @include responsive(md) {
+        margin-top: 1em;
+    }
+
+    @include responsive(lg) {
+        padding: 0 70px;
+        margin-top: 2em;
+    }
+
+    @include responsive(xl) {
+        padding: 0 100px;
+    }
+
+    @include responsive(hd) {
+        padding: 0 150px;
+        margin-top: 3em;
+    }
+
+    &_title {
+        margin: auto;
+
+        @include responsive(md) {
+            margin: 0;
+        }
+
+        h4 {
+            text-align: center;
+            font-family: SegoeSB;
+            font-size: 15px;
+            color: $color1;
+            letter-spacing: 1px;
+
+            @include responsive(md) {
+                font-size: 10px;
+                text-align: left;
+            }
+
+            @include responsive(lg) {
+                font-size: 13px;
+            }
+
+            @include responsive(hd) {
+                font-size: 20px;
+            }
+        }
+
+        h1 {
+            margin: -5px 0;
+            font-family: SegoeB;
+            font-size: 90px;
+            color: $color2;
+            line-height: 1.1;
+
+            @include responsive(md) {
+                font-size: 53px;
+            }
+
+            @include responsive(lg) {
+                font-size: 70px;
+            }
+
+            @include responsive(xl) {
+                font-size: 100px;
+            }
+
+            @include responsive(hd) {
+                font-size: 144px;
+            }
+        }
+    }
+
+    a {
+        font-size: 15px;
+        color: $color1;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        border-radius: 40px;
+        width: 60%;
+        font-family: SegoeB;
+        border: 2px solid $color1;
+        margin: 4em auto 0 auto;
+        padding: .7em 1em;
+
+        @include responsive(md) {
+            font-size: 11px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            width: 45%;
+            font-family: SegoeB;
+            border: none;
+            border-radius: 40px;
+            padding: 1.5em 2.5em;
+            margin: 3em 0 0 0;
+            background-image: linear-gradient(to right, #2D88FF, #5CA3FF, #85BAFF);
+        }
+
+        @include responsive(lg) {
+            width: 40%;
+            font-size: 13px;
+            padding: 1.3em 2.5em;
+        }
+
+        @include responsive(hd) {
+            padding: 1.3em 2.2em;
+            margin-top: 4em;
+            width: 40%;
+            font-size: 20px;
+        }
+    }
+}
+
+.hero-img {
+    display: none;
+
+    @include responsive(md) {
+        display: block;
+        width: 68%;
+    }
+
+    @include responsive(lg) {
+        width: 70%;
+    }
+
+    @include responsive(xl) {
+        width: 60%;
+    }
+
+    @include responsive(hd) {
+        width: auto;
+    }
+}
